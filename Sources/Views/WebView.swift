@@ -27,3 +27,20 @@ public struct WebView: UIViewRepresentable {
     }
 }
 
+@available(iOS 13.0, *)
+public struct SwiftuiView : UIViewRepresentable {
+    
+    public let frame: CGRect
+    
+    public func makeUIView(context: Context) -> some UIView {
+        return RegularView(frame: frame)
+    }
+    
+    // Updates the created view with necessary data
+    public func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+    
+}
+
+

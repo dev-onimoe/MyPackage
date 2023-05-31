@@ -35,13 +35,9 @@ public struct BottomSheetView: View {
                 }
                 
                 
-                Button(action: {
-                    isShowingWebView = true
-                })
-                {
+                Button(action: {isShowingWebView = true}){
                     Text("Liveness Check")
-                }
-                .sheet(isPresented: $isShowingWebView) {
+                }.sheet(isPresented: $isShowingWebView) {
                     WebView(url: URL(string:"https://os.dev.youverify.co/v-forms/644933b8c451436821dac571")!)
                 }
                 
