@@ -11,8 +11,8 @@ import UIKit
 
 public class RegularView : UIView {
     
-    let name = "Adewale"
-    var button = UIButton()
+    public var name = "Adewale"
+    public var button = UIButton()
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
