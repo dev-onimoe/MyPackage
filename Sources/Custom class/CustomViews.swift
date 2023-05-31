@@ -24,6 +24,8 @@ public class RegularView : UIView {
         backView.backgroundColor = .white
         backView.constraint(equalToLeft: leadingAnchor, equalToRight: trailingAnchor, paddingLeft: 16, paddingRight: 16, height: 400)
         backView.layer.cornerRadius = 12
+        backView.layer.borderColor = UIColor.black.cgColor
+        backView.layer.borderWidth = 2
         backView.centre(centreY: centerYAnchor)
         
         let hello = UILabel()
@@ -39,6 +41,7 @@ public class RegularView : UIView {
         hello.textAlignment = .right
         
         let smallStack = UIStackView(arrangedSubviews: [hello, nameLabel])
+        smallStack.distribution = .fillEqually
         smallStack.spacing = 12
         
         //let button = UIButton()
@@ -49,6 +52,7 @@ public class RegularView : UIView {
         button.tintColor = .white
         button.titleLabel?.textColor = .white
         button.setTitleColor(.white, for: .normal)
+        button.constraint(width: 250)
         
         let bigStack = UIStackView(arrangedSubviews: [smallStack, button])
         bigStack.axis = .vertical
