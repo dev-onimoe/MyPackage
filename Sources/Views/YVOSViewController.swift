@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class YVOSViewController: UIViewController {
+public class YVOSViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
