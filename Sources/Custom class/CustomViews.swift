@@ -22,7 +22,7 @@ public class RegularView : UIView {
         let backView = UIView()
         addSubview(backView)
         backView.backgroundColor = .white
-        backView.constraint(equalToLeft: leadingAnchor, equalToRight: trailingAnchor, paddingLeft: 16, paddingRight: 16, height: 400)
+        backView.constraint(equalToLeft: leadingAnchor, equalToRight: trailingAnchor, paddingLeft: 16, paddingRight: 16, height: 300)
         backView.layer.cornerRadius = 12
         backView.layer.borderColor = UIColor.black.cgColor
         backView.layer.borderWidth = 2
