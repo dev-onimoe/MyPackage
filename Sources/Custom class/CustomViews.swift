@@ -35,7 +35,7 @@ public class RegularView : UIView {
         hello.textAlignment = .left
         
         let nameLabel = UILabel()
-        nameLabel.text = name
+        //nameLabel.text = name
         nameLabel.font = UIFont.systemFont(ofSize: 18)
         nameLabel.textColor = .black
         hello.textAlignment = .right
@@ -67,5 +67,57 @@ public class RegularView : UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
+}
+
+public class HomeView : UIView {
+    
+    
+    public var vForms = UIButton()
+    public var livenessCheck = UIButton()
+    public var documentCapture = UIButton()
+    
+    override public init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        
+        vForms.constraint(height: 50)
+        vForms.layer.cornerRadius = 12
+        vForms.setTitle("VForms", for: .normal)
+        vForms.backgroundColor = .black
+        vForms.tintColor = .white
+        vForms.titleLabel?.textColor = .white
+        vForms.setTitleColor(.white, for: .normal)
+        vForms.constraint(width: 250)
+        
+        livenessCheck.constraint(height: 50)
+        livenessCheck.layer.cornerRadius = 12
+        livenessCheck.setTitle("Liveness Check", for: .normal)
+        livenessCheck.backgroundColor = .black
+        livenessCheck.tintColor = .white
+        livenessCheck.titleLabel?.textColor = .white
+        livenessCheck.setTitleColor(.white, for: .normal)
+        livenessCheck.constraint(width: 250)
+        
+        documentCapture.constraint(height: 50)
+        documentCapture.layer.cornerRadius = 12
+        documentCapture.setTitle("Document Capture", for: .normal)
+        documentCapture.backgroundColor = .black
+        documentCapture.tintColor = .white
+        documentCapture.titleLabel?.textColor = .white
+        documentCapture.setTitleColor(.white, for: .normal)
+        documentCapture.constraint(width: 250)
+        
+        let bigStack = UIStackView(arrangedSubviews: [vForms, livenessCheck, documentCapture])
+        bigStack.axis = .vertical
+        bigStack.spacing = 16
+        addSubview(bigStack)
+        bigStack.constraint(equalToTop: topAnchor, equalToBottom: bottomAnchor, equalToLeft: leadingAnchor, equalToRight: trailingAnchor)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
