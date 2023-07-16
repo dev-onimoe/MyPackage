@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DocumentOptions : Options {
+public class DocumentOptions : Options {
     
     let publicMerchantKey : String = ""
     let dev = false

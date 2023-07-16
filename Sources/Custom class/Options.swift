@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Options {
+public class Options {
     
     
 }

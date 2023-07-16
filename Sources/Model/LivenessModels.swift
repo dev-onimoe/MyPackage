@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LivenessOptions : Options {
+public class LivenessOptions : Options {
     
     let publicMerchantKey : String = ""
     let dev = false
