@@ -12,7 +12,7 @@ import Foundation
 struct AccessPointResponse : Codable {
     
     let data: AccessPointData
-    let links: [Any]
+    let links: [String]
     let details: [String : String] = [:]
     let message: String
     let statusCode: Int
@@ -24,8 +24,8 @@ struct AccessPointData : Codable {
     let _createdAt: String
     let _lastModifiedAt: String
     let createdAt: String
-    let creatorId: Any
-    let details: Any
+    let creatorId: String
+    let details: String
     let id: String
     let lastModifiedAt: String
     let mode: String
