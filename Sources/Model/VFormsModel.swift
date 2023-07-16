@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class vFormOptions : Options {
+public class vFormOptions : Options {
     
     let vFormId : String
     let publicMerchantKey : String

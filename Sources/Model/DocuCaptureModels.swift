@@ -9,15 +9,21 @@ import Foundation
 
 public class DocumentOptions : Options {
     
-    let publicMerchantKey : String = ""
+    let publicMerchantKey : String
     let dev = false
     let metadata : [String : Any]? = nil
-    let personalInfo : DocumentPersonalInfo? = nil
+    let personalInfo : DocumentPersonalInfo?
     let appearance = Appearance(greeting: "We will need to carry out a  document capture. It will only take a moment.", actionText: "Start Document Capture")
     let onSuccess : (LivenessData?) -> Void = {_ in}
     let onClosed : (LivenessData?) -> Void = {_ in}
     let onCancelled : (LivenessData?) -> Void = {_ in}
     let countries : [Country]?  = nil
+    
+    init(publicMerchantKey: String, personalInfo: DocumentPersonalInfo? = nil) {
+        
+        self.publicMerchantKey = publicMerchantKey
+        self.personalInfo = personalInfo
+    }
 }
 
 struct Country{
