@@ -31,21 +31,21 @@ public class vFormOptions : Options {
 
 public struct Appearance {
     
-    var greeting : String? = "We will need to verify your identity. It will only take a moment."
-    var actionText = "Verify Identity"
-    var bTnTextColor = UIColor.white
-    var primaryColor = UIColor.white
-    var btnBackgroundColor = UIColor.black
+    public var greeting : String? = "We will need to verify your identity. It will only take a moment."
+    public var actionText = "Verify Identity"
+    public var bTnTextColor = UIColor.white
+    public var primaryColor = UIColor.white
+    public var btnBackgroundColor = UIColor.black
 }
 
 public struct PersonalInfo {
     
-    let firstName : String?
-    let lastname : String? = "Onikeku"
-    let middleName : String? = "Olakunle"
-    let email : String? = "masud@youverify.co"
-    let phone : String? = "+2348166176757"
-    let gender : Gender? = Gender.Male
+    public let firstName : String?
+    public let lastname : String? = "Onikeku"
+    public let middleName : String? = "Olakunle"
+    public let email : String? = "masud@youverify.co"
+    public let phone : String? = "+2348166176757"
+    public let gender : Gender? = Gender.Male
 }
 
 public struct VFormsEntryData {
