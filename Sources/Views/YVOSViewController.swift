@@ -58,7 +58,9 @@ public class YVOSViewController: UIViewController {
         
         viewModel.AccessResponse.bind(completion: {[weak self] response in
             
-            self?.back.removeProperly()
+            DispatchQueue.main.async {
+                self?.back.removeProperly()
+            }
             if response != nil {
                 
                 if let accessResp = response!.object as? AccessPointResponse {
