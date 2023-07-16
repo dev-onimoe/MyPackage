@@ -25,6 +25,7 @@ extension UIViewController {
         
         //let loader = UIActivityIndicatorView()
         loader.constraint(width: 50, height: 50)
+        loader.tintColor = .black
         back.addSubview(loader)
         loader.centre(centerX: back.centerXAnchor, centreY: back.centerYAnchor)
         loader.startAnimating()

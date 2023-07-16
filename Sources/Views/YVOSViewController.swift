@@ -58,6 +58,7 @@ public class YVOSViewController: UIViewController {
         
         viewModel.AccessResponse.bind(completion: {[weak self] response in
             
+            self?.back.removeProperly()
             if response != nil {
                 
                 if let accessResp = response!.object as? AccessPointResponse {
@@ -93,6 +94,7 @@ public class YVOSViewController: UIViewController {
         
         let reg = HomeView()
         //reg.button.addTarget(self, action: #selector(openWeb), for: .touchUpInside)
+        self.view.backgroundColor = .white
         self.view.addSubview(reg)
         reg.centre(centerX: self.view.centerXAnchor, centreY: self.view.centerYAnchor)
         
