@@ -16,9 +16,9 @@ public class YVOSViewController: UIViewController {
     let viewModel = ViewModel()
     var id = ""
     
-    var vformOptions : vFormOptions? = nil
-    var livenessOptions : LivenessOptions? = nil
-    var documentOptions : DocumentOptions? = nil
+    public var vformOptions : vFormOptions? = nil
+    public var livenessOptions : LivenessOptions? = nil
+    public var documentOptions : DocumentOptions? = nil
     
     public init(vformOptions: vFormOptions?) {
         
