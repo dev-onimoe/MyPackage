@@ -57,7 +57,7 @@ public struct VFormsEntryData {
 
 
 
-enum Gender {
+public enum Gender {
     
     case Male
     case Female
