@@ -60,6 +60,7 @@ public class YVOSViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self?.back.removeProperly()
+                
             }
             if response != nil {
                 
