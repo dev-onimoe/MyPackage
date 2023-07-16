@@ -36,6 +36,14 @@ public struct Appearance {
     public var bTnTextColor = UIColor.white
     public var primaryColor = UIColor.white
     public var btnBackgroundColor = UIColor.black
+    
+    public init(greeting: String? = nil, actionText: String = "Verify Identity", bTnTextColor: UIColor = UIColor.white, primaryColor: UIColor = UIColor.white, btnBackgroundColor: UIColor = UIColor.black) {
+        self.greeting = greeting
+        self.actionText = actionText
+        self.bTnTextColor = bTnTextColor
+        self.primaryColor = primaryColor
+        self.btnBackgroundColor = btnBackgroundColor
+    }
 }
 
 public struct PersonalInfo {
@@ -46,12 +54,21 @@ public struct PersonalInfo {
     public let email : String? = "masud@youverify.co"
     public let phone : String? = "+2348166176757"
     public let gender : Gender? = Gender.Male
+    
+    public init(firstName: String?) {
+        self.firstName = firstName
+    }
 }
 
 public struct VFormsEntryData {
     
     let id : String
     let fields : [[String : Any?]]
+    
+    public init(id: String, fields: [[String : Any?]]) {
+        self.id = id
+        self.fields = fields
+    }
 }
 
 
