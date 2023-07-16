@@ -20,20 +20,20 @@ public class LivenessOptions : Options {
     let onCancelled : (LivenessData?) -> Void = {_ in}
     let onRetry : (LivenessData?) -> Void = {_ in}
     
-    init(publicMerchantKey: String, personalInfo: LivenessPersonalInfo? = nil) {
+    public init(publicMerchantKey: String, personalInfo: LivenessPersonalInfo? = nil) {
         
         self.publicMerchantKey = publicMerchantKey
         self.personalInfo = personalInfo
     }
 }
 
-struct LivenessPersonalInfo {
+public struct LivenessPersonalInfo {
     
     let firstName : String? = ""
     let lastName : String? = ""
 }
 
-struct LivenessData {
+public struct LivenessData {
     
     let passed : Bool
     let photo : String?

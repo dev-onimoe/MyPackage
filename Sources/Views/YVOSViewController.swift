@@ -20,19 +20,19 @@ public class YVOSViewController: UIViewController {
     var livenessOptions : LivenessOptions? = nil
     var documentOptions : DocumentOptions? = nil
     
-    init(vformOptions: vFormOptions?) {
+    public init(vformOptions: vFormOptions?) {
         
         self.vformOptions = vformOptions
         super.init(nibName: nil, bundle: nil)
     }
     
-    init(livenessOptions: LivenessOptions?) {
+    public init(livenessOptions: LivenessOptions?) {
         
         self.livenessOptions = livenessOptions
         super.init(nibName: nil, bundle: nil)
     }
     
-    init(documentOptions: DocumentOptions?) {
+    public init(documentOptions: DocumentOptions?) {
         
         self.documentOptions = documentOptions
         super.init(nibName: nil, bundle: nil)

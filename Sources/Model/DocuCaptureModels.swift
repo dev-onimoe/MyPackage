@@ -19,20 +19,20 @@ public class DocumentOptions : Options {
     let onCancelled : (LivenessData?) -> Void = {_ in}
     let countries : [Country]?  = nil
     
-    init(publicMerchantKey: String, personalInfo: DocumentPersonalInfo? = nil) {
+    public init(publicMerchantKey: String, personalInfo: DocumentPersonalInfo? = nil) {
         
         self.publicMerchantKey = publicMerchantKey
         self.personalInfo = personalInfo
     }
 }
 
-struct Country{
+public struct Country{
     let countryCode: String = ""
     let idTypes: [String] = []
     let province: [String]  = []
 }
 
-struct DocumentPersonalInfo {
+public struct DocumentPersonalInfo {
     
     let firstName : String? = ""
     
@@ -40,7 +40,7 @@ struct DocumentPersonalInfo {
 
 
 
-enum DocumentType : String {
+public enum DocumentType : String {
     case NATIONAL_ID = "national_id"
     case VOTERS_CARD = "voters_card"
     case DRIVERS_LICENSE = "drivers_license"

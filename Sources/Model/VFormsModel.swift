@@ -11,25 +11,25 @@ import UIKit
 
 public class vFormOptions : Options {
     
-    let vFormId : String
-    let publicMerchantKey : String
+    public let vFormId : String
+    public let publicMerchantKey : String
     let dev = true
     let sandboxEnvironment = true
     let onSuccess : (VFormsEntryData?) -> Void = {_ in}
     let onFailed : (VFormsEntryData?) -> Void = {_ in }
     let onCompleted : (VFormsEntryData?) -> Void = {_ in }
-    let personalInfo : PersonalInfo?
+    public let personalInfo : PersonalInfo?
     let appearance : Appearance? = Appearance()
     let metadata : [String : Any]? = nil
     
-    init(vFormId: String, publicMerchantKey: String, personalInfo: PersonalInfo?) {
+    public init(vFormId: String, publicMerchantKey: String, personalInfo: PersonalInfo?) {
         self.vFormId = vFormId
         self.publicMerchantKey = publicMerchantKey
         self.personalInfo = personalInfo
     }
 }
 
-struct Appearance {
+public struct Appearance {
     
     var greeting : String? = "We will need to verify your identity. It will only take a moment."
     var actionText = "Verify Identity"
@@ -38,7 +38,7 @@ struct Appearance {
     var btnBackgroundColor = UIColor.black
 }
 
-struct PersonalInfo {
+public struct PersonalInfo {
     
     let firstName : String?
     let lastname : String? = "Onikeku"
@@ -48,7 +48,7 @@ struct PersonalInfo {
     let gender : Gender? = Gender.Male
 }
 
-struct VFormsEntryData {
+public struct VFormsEntryData {
     
     let id : String
     let fields : [[String : Any?]]
