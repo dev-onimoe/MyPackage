@@ -19,7 +19,7 @@ extension UIViewController {
     func showLoader(back: UIView, loader: UIActivityIndicatorView) {
         
         //let back = UIView()
-        back.backgroundColor = .red
+        back.backgroundColor = .white
         view.addSubview(back)
         back.constraint(equalToTop: view.topAnchor, equalToBottom: view.bottomAnchor, equalToLeft: view.leadingAnchor, equalToRight: view.trailingAnchor)
         
